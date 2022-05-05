@@ -23,12 +23,6 @@
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "CI=true yarn test"
-    }
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
