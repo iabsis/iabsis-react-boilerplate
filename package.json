@@ -37,6 +37,12 @@
       "prettier --write"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "CI=true npm run test"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
