@@ -1,4 +1,5 @@
 import React from 'react';
+import MainMenu from '../MainMenu/MainMenu';
 import './Header.styles.scss';
 
 /**
@@ -8,7 +9,8 @@ import './Header.styles.scss';
 function Header() {
   return (
     <div className="Header" data-testid="header">
-      Iabsis react boilerplate
+      <div className="main-title">Iabsis react boilerplate</div>
+      <MainMenu />
     </div>
   );
 }

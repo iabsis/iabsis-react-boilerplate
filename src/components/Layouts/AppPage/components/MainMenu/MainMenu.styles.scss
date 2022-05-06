@@ -1,0 +1,20 @@
+/**
+ * MainMenu specifics stylesheet
+ */
+
+.MainMenu {
+    display: flex;
+    list-style: none;
+
+    li {
+        &::after {
+            content: "|";
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        &:last-child::after {
+            content: initial;
+        }
+    }
+}
