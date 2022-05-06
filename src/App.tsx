@@ -1,13 +1,9 @@
+import HomePage from '@pages/HomePage/HomePage';
 import React from 'react';
-import './App.css';
-import Header from './components/Header/Header';
+import './App.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <Header></Header>
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;

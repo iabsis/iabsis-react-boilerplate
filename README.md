@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Simple react boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This boilerplate integrate the minimum features to start a new react project. Crafter on top the `npx create-react-app` commands, it adds some useful utils to be able to develop a clean application.
 
-## Available Scripts
+For this reason, all usual react commands are available :
 
-In the project directory, you can run:
+* `yarn start` : Run the project in development mode
+* `yarn build` : Build the source code for production
+* `yarn test` : Run the unit tests
+* `yarn eject` : Eject the project. It is grabbing all automated config from `creaate-react-app` into the local project. You can't revert this action.
 
-### `yarn start`
+## What is included?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+We integrated and setup different libraries. The main objective was to have testing / lingint / code genration and commit hooks to prevent developer pushing untested / unclean source code.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Unit testing
 
-### `yarn test`
+Standard libraries from react are used and use Jest under the hood.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Generator
 
-### `yarn build`
+We have created 2 generator on top the the `plop.js` library.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### List of generators:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* yarn generate component: This command generate a new component to be embeded in any page (or other component) like Header, Footer, ...
+* yarn generate page: This command generate a new page scafolding. Just add it to the router to be able to access it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Linting
 
-### `yarn eject`
+We concider that linting is very important for a team to work together. We've setup automatic linting with eslint and prettier to work smoothly
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Git hooks
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+There are 2 hooks setup with the help of the `husky` library.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Pre commit: When commiting, the eslint tries to auto fix linting issues. If some linting errors persists, the commit is cancelled.
+* Pre push: When pushing, the unit test are automatically ran. If a test fails, the push is cancelled.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## What is not included?
 
-## Learn More
+### Templating
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We believe that every project is different and requires different approaches when it comes to styling. We integrated scss support but we decided not to include any templating like bootstrap, material or tailwind. This should be decided for each project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Stores
+
+The last react version is shipped with a powerfull useContext hook. This makes the use of extra store library optional for a large amount of use cases. This is the reason we don't plan to include extra stores like redux or mobx or whatever.
+
+### Probably a lot of other things
+
+Is is up to you to make some suggestions. It is even better if you propose a merge request with your propositions. If it focusses on code quality, chances are high that we would merge it into this project.

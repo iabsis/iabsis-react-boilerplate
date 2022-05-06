@@ -1,18 +1,20 @@
 import React from 'react';
+import AppPage from '../../components/Layouts/AppPage/AppPage';
 import './{{pascalCase name}}.styles.scss';
 
 /**
  * {{pascalCase name}} component description
  */
 
-function {{pascalCase name}}() {
-  return (
-    <div className="{{pascalCase name}}">
-      <p>
-        Edit <code>src/components/{{pascalCase name}}.tsx</code> and save to reload.
-      </p>
-    </div>
-  );
-}
+type {{pascalCase name}}Props = {};
+
+// Rendering the page
+const {{pascalCase name}}: React.FC<{{pascalCase name}}Props> = (/* {} */) => (
+  <AppPage>
+    <>
+      {{pascalCase name}} component. Edit it at <code>pages/{{pascalCase name}}/{{pascalCase name}}.ts</code>
+    </>
+  </AppPage>
+);
 
 export default {{pascalCase name}};

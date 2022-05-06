@@ -21,17 +21,17 @@ module.exports = {
       {
         type: 'add',
         path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.tsx',
-        templateFile: './generate/component/templates/component.hbs',
+        templateFile: './generate/page/templates/component.hbs',
       },
       {
         type: 'add',
         path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
-        templateFile: './generate/component/templates/test.hbs',
+        templateFile: './generate/page/templates/test.hbs',
       },
       {
         type: 'add',
         path: 'src/pages/{{pascalCase name}}/{{pascalCase name}}.styles.scss',
-        templateFile: './generate/component/templates/styles.hbs',
+        templateFile: './generate/page/templates/styles.hbs',
       },
     ];
   },

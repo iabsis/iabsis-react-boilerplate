@@ -7,10 +7,8 @@ import './Header.styles.scss';
 
 function Header() {
   return (
-    <div className="Header">
-      <p>
-        Edit <code>src/components/Header.tsx</code> and save to reload.
-      </p>
+    <div className="Header" data-testid="header">
+      Iabsis react boilerplate
     </div>
   );
 }

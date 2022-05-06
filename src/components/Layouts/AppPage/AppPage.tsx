@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from '../../Header/Header';
+import Header from '@components/Layouts/AppPage/components/Header/Header';
 import './AppPage.styles.scss';
+import Footer from './components/Footer/Footer';
 
 /**
  * AppPage component description
@@ -13,10 +14,13 @@ type AppPageProps = {
 
 // Rendering the page
 const AppPage: React.FC<AppPageProps> = ({ children }) => (
-  <>
+  <div className="AppPage">
     <Header />
-    {children}
-  </>
+    <div className="AppPageBody" data-testid="body">
+      {children}
+    </div>
+    <Footer />
+  </div>
 );
 
 export default AppPage;

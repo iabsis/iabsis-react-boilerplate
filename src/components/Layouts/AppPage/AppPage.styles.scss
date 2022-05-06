@@ -3,6 +3,14 @@
  */
 
 .AppPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
-
+    .AppPageBody {
+        flex-grow: 1;
+        padding: 16px;
+        max-width: 1015px;
+        margin: auto;
+    }
 }
