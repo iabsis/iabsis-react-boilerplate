@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import AboutPage from './AboutPage';
+import { renderWithRouter } from '@utils/unitTesting';
 
 test('renders render AboutPage', () => {
-  render(<AboutPage />);
-  const linkElement = screen.getByText(/AboutPage/i);
+  renderWithRouter(<AboutPage />);
+  const linkElement = screen.getByTestId('AboutPage');
   expect(linkElement).toBeInTheDocument();
 });

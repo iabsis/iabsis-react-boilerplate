@@ -11,9 +11,9 @@ type AboutPageProps = {};
 // Rendering the page
 const AboutPage: React.FC<AboutPageProps> = (/* {} */) => (
   <AppPage>
-    <>
+    <div data-testid="AboutPage">
       AboutPage component. Edit it at <code>pages/AboutPage/AboutPage.ts</code>
-    </>
+    </div>
   </AppPage>
 );
 
