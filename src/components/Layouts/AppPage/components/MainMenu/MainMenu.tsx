@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './MainMenu.styles.scss';
 
 /**
@@ -10,14 +10,14 @@ function MainMenu() {
   return (
     <ul className="MainMenu" data-testid="main-menu">
       <li>
-        <Link className="entry" to="/">
+        <NavLink className="entry" to="/">
           Home page
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="entry" to="/about">
+        <NavLink className="entry" to="/about">
           About
-        </Link>
+        </NavLink>
       </li>
     </ul>
   );

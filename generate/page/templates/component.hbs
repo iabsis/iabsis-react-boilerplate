@@ -1,5 +1,5 @@
 import React from 'react';
-import AppPage from '../../components/Layouts/AppPage/AppPage';
+import AppPage from '@components/Layouts/AppPage/AppPage';
 import './{{pascalCase name}}.styles.scss';
 
 /**
@@ -11,9 +11,9 @@ type {{pascalCase name}}Props = {};
 // Rendering the page
 const {{pascalCase name}}: React.FC<{{pascalCase name}}Props> = (/* {} */) => (
   <AppPage>
-    <>
+    <div data-testid="{{pascalCase name}}">
       {{pascalCase name}} component. Edit it at <code>pages/{{pascalCase name}}/{{pascalCase name}}.ts</code>
-    </>
+    </div>
   </AppPage>
 );
 

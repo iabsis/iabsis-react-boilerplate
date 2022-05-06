@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import {{pascalCase name}} from './{{pascalCase name}}';
+import { renderWithRouter } from '@utils/unitTesting';
 
 test('renders render {{pascalCase name}}', () => {
-  render(<{{pascalCase name}} />);
-  const linkElement = screen.getByText(/{{pascalCase name}}/i);
+  renderWithRouter(<{{pascalCase name}} />);
+  const linkElement = screen.getByTestId(/{{pascalCase name}}/i);
   expect(linkElement).toBeInTheDocument();
 });
