@@ -1,4 +1,8 @@
 module.exports = {
+  globals: {
+    React: true,
+    JSX: true,
+  },
   settings: {
     react: {
       version: 'detect',
