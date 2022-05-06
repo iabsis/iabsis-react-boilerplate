@@ -4,6 +4,6 @@ import Footer from './Footer';
 
 test('renders render Footer', () => {
   render(<Footer />);
-  const linkElement = screen.getByText(/Footer/i);
+  const linkElement = screen.getByTestId('footer');
   expect(linkElement).toBeInTheDocument();
 });

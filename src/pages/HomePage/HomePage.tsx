@@ -20,23 +20,23 @@ const HomePage: React.FC<HomePageProps> = (/* {} */) => (
         develop a clean application.
         <br />
         For this reason, all usual react commands are available :
-        <ul>
-          <li>
-            <code>yarn start</code> : Run the project in development mode
-          </li>
-          <li>
-            <code>yarn build</code> : Build the source code for production
-          </li>
-          <li>
-            <code>yarn test</code> : Run the unit tests
-          </li>
-          <li>
-            <code>yarn eject</code> : Eject the project. It is grabbing all automated config from{' '}
-            <code>creaate-react-app</code> into the local project. You can&quot;t revert this
-            action.
-          </li>
-        </ul>
       </p>
+
+      <ul>
+        <li>
+          <code>yarn start</code> : Run the project in development mode
+        </li>
+        <li>
+          <code>yarn build</code> : Build the source code for production
+        </li>
+        <li>
+          <code>yarn test</code> : Run the unit tests
+        </li>
+        <li>
+          <code>yarn eject</code> : Eject the project. It is grabbing all automated config from{' '}
+          <code>creaate-react-app</code> into the local project. You can&quot;t revert this action.
+        </li>
+      </ul>
 
       <h2>What is included?</h2>
 
