@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import AppPage from './AppPage';
+import { renderWithRouter } from '@utils/unitTesting';
 
 test('renders render AppPage', () => {
-  render(
+  renderWithRouter(
     <AppPage>
       <>Welcome</>
     </AppPage>,

@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import MainMenu from './MainMenu';
+import { renderWithRouter } from '@utils/unitTesting';
 
 test('renders render MainMenu', () => {
-  render(<MainMenu />);
+  renderWithRouter(<MainMenu />);
   const linkElement = screen.getByTestId('main-menu');
   expect(linkElement).toBeInTheDocument();
 });

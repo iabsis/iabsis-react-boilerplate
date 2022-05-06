@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import Header from './Header';
+import { renderWithRouter } from '@utils/unitTesting';
 
 test('renders render Header', () => {
-  render(<Header />);
+  renderWithRouter(<Header />);
   const linkElement = screen.getByTestId('header');
   expect(linkElement).toBeInTheDocument();
 });

@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import App from './App';
+import { renderWithRouter } from '@utils/unitTesting';
 
 test('renders a complete page', () => {
-  render(<App />);
+  renderWithRouter(<App />);
   const header = screen.getByTestId('header');
   expect(header).toBeDefined();
 
