@@ -8,9 +8,9 @@ module.exports = {
       validate: function (value) {
         let message = true;
         if (!/.+/.test(value)) {
-          message = console.error('Missing', 'you must define a component name');
+          return 'you must define a component name';
         } else if (value.length < 3) {
-          message = console.error('Too Short', `"${value}" is not descriptive enough`);
+          return `"${value}" is not descriptive enough`;
         }
         return message;
       },
